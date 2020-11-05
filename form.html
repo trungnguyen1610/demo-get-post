@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #D5FEFF;
+            padding: 2rem 3.5rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            max-width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        /* form start */
+        form {
+
+            padding: 0.5rem;
+            background-color: #fff;
+
+        }
+
+        form .row {
+            display: flex;
+            align-items: center;
+
+            padding: 7px 8px;
+            margin-bottom: 7px;
+        }
+
+        .col-2 {
+            flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+
+        }
+
+        form label {
+            color: #FF4C00;
+
+        }
+
+        form .label-left {
+            color: #2A42B7;
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 120px;
+           padding-right: 20px;
+            text-align: right;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+        }
+
+        /* form end */
+        .hobby {
+            background-color: #FF4C00;
+            color: white;
+            padding: 0.5rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        @media screen and (max-width: 700px) {
+
+            input[type=text],
+            select,
+            textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="contactform" name="contact" action="/action_page" method="get">
+            <h1 class="hobby" style="text-align: center;">SỞ THÍCH CỦA BẠN</h1>
+            <div class="row">
+                <label class="label-left" for="name">Họ và tên</label>
+                <input type="text" id="name" name="name" size="60">
+            </div>
+
+            <div class="row">
+                <label class="label-left" for="email">Email</label>
+                <input type="text" id="email" name="email" size="40">
+            </div>
+           
+            <div class="row">
+                <label class="label-left" for="hobby">Sở thích</label>
+                <div class="col-2">
+                    <input type="checkbox" id="sports" name="sports" value="sports">
+
+                    <label for="sports"> Thể thao</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="checkbox" id="music" name="music" value="music">
+                    <label for="music"> Âm nhạc</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="read" name="read" value="read">
+                    <label for="read">Đọc Sách</label>
+                </div>
+
+            </div>
+           
+            <div class="row">
+                <label class="label-left" for=""></label>
+                <div class="col-2">
+                    <input type="checkbox" id="websearch" name="websearch" value="websearch">
+                    <label for="websearch"> Lướt web</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" id="games" name="games" value="games">
+                    <label for="games"> Chơi game</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" id="acting" name="acting" value="acting">
+                    <label for="acting">Điện Ảnh</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <label class="label-left" for=""></label>
+                <div class="col-2">
+                    <input type="checkbox" id="travel" name="travel" value="travel">
+                    <label for="travel">Du lịch</label>
+                </div>
+
+            </div>
+           
+            <div class="row">
+                <label class="label-left" for=""></label>
+               
+                    <button type="submit" value="Submit" style="margin-right: 10px;">Submit</button>
+                    <button type="reset" value="Reset">Reset</button>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

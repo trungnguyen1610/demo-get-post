@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+           
+            padding: 2rem 3.5rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            max-width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button{
+            padding: 5px 10px;
+        }
+        /* form start */
+        form {
+            background: #FFFDA9;
+            padding: 0.5rem;
+    
+        }
+
+        form .row {
+            display: flex;
+            align-items: center;
+
+            padding: 7px 8px;
+            margin-bottom: 7px;
+        }
+
+        .col-2 {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+
+        }
+
+        form label {
+            color: #FF4C00;
+
+        }
+
+        form .label-left {
+            color: #2A42B7;
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 120px;
+            padding-right: 20px;
+            text-align: left;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+        }
+
+        /* form end */
+        .hobby {
+            background-color: #D5FEFF;
+            color: white;
+            padding: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #2A42B7;
+
+        }
+
+        @media screen and (max-width: 700px) {
+
+            input[type=text],
+            input[type=email],
+            select,
+            textarea {
+                width: 100%;
+            }
+            input[type=tel]{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="contactform" name="contact" action="/action_page" method="get">
+            <h1 class="hobby" style="text-align: left;">Đăng Ký Học Viên</h1>
+            <div class="row">
+                <label class="label-left" for="name">Họ và tên</label>
+                <input type="text" id="name" name="name" size="60">
+            </div>
+
+            <div class="row">
+                <label class="label-left" for="dateofbirth">Ngày sinh</label>
+                <input type="text" id="dateofbirth" name="dateofbirth" size="40">
+            </div>
+
+            <div class="row">
+                <label class="label-left" for="sex">Giới tính</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male"> Nam</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"> Nữ</label>
+            </div>
+            <div class="row">
+                <label class="label-left" for="address">Địa chỉ</label>
+                <textarea id="address" name="address" rows="4" cols="50"></textarea>
+            </div>
+            <div class="row">
+                <label class="label-left" for="classroom">Lớp</label>
+                <select name="classroom" id="classroom">
+                    <option value="">--Chọn Lớp --</option>
+                    <option value="">Lớp 1</option>
+                    <option value="">Lớp 2</option>
+                    <option value="">Lớp 3</option>
+                    <option value="">Lớp 4</option>
+                    <option value="">Lớp 5</option>
+
+                </select>
+            </div>
+            <div class="row">
+                <label class="label-left" for="email">Email</label>
+                <input type="email" id="email" name="email" size="40">
+            </div>
+            <div class="row">
+                <label class="label-left" for="phone">Điện thoại</label>
+                <input  type="tel" id="phone" name="phone" size="40">
+            </div>
+            <div class="row">
+                <label class="label-left" for=""></label>
+               
+                    <button type="submit" value="Submit" style="margin-right: 10px;">Submit</button>
+                    <button type="reset" value="Reset">Reset</button>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
